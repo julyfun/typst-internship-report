@@ -1,0 +1,73 @@
+Tremor:
+  type: misc
+  title: 'Tremor Reduction of the Master Arm for Master-Slave Surgical Robot'
+  author:
+  - 姜紫阳
+  - 代煜
+  - 张建勋
+  - 孙会娇
+  date: 2019
+  url: https://www.webofscience.com/wos/alldb/full-record/CSCD:6505295
+
+affine:
+  type: article
+  title: Affine interpolation in a lie group framework
+  author:
+  - Bansal, Sumukh
+  - Tatu, Aditya
+  date: 2019-07
+  url: https://doi.org/10.1145/3306346.3322997
+  serial-number:
+    doi: 10.1145/3306346.3322997
+    issn: 0730-0301
+  abstract: Affine transformations are of vital importance in many tasks pertaining to motion design and animation. Interpolation of affine transformations is non-trivial. Typically, the given affine transformation is decomposed into simpler components which are easier to interpolate. This may lead to unintuitive results, while in some cases, such solutions may not work. In this work, we propose an interpolation framework which is based on a Lie group representation of the affine transformation. The Lie group representation decomposes the given transformation into simpler and meaningful components, on which computational tools like the exponential and logarithm maps are available in closed form. Interpolation exists for all affine transformations while preserving a few characteristics of the original transformation. A detailed analysis and several experiments of the proposed framework are included.
+  parent:
+    type: periodical
+    title: ACM Trans. Graph.
+    publisher: Association for Computing Machinery
+    location: New York, NY, USA
+    issue: 4
+    volume: 38
+
+curobo:
+  type: article
+  title: 'CuRobo: Parallelized Collision-Free Robot Motion Generation'
+  author:
+  - Sundaralingam, Balakumar
+  - Hari, Siva Kumar Sastry
+  - Fishman, Adam
+  - Garrett, Caelan
+  - Van Wyk, Karl
+  - Blukis, Valts
+  - Millane, Alexander
+  - Oleynikova, Helen
+  - Handa, Ankur
+  - Ramos, Fabio
+  - Ratliff, Nathan
+  - Fox, Dieter
+  date: 2023
+  page-range: 8112–8119
+  serial-number:
+    doi: 10.1109/ICRA48891.2023.10160765
+  parent:
+    type: proceedings
+    title: 2023 IEEE International Conference on Robotics and Automation (ICRA)
+    issue: ''
+    volume: 0
+
+zhang2020mediapipehandsondevicerealtime:
+  type: misc
+  title: 'MediaPipe Hands: On-device Real-time Hand Tracking'
+  author:
+  - Zhang, Fan
+  - Bazarevsky, Valentin
+  - Vakunov, Andrey
+  - Tkachenka, Andrei
+  - Sung, George
+  - Chang, Chuo-Ling
+  - Grundmann, Matthias
+  date: 2020
+  url: https://arxiv.org/abs/2006.10214
+  serial-number:
+    arxiv: '2006.10214'
+
