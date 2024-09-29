@@ -71,3 +71,44 @@ zhang2020mediapipehandsondevicerealtime:
   serial-number:
     arxiv: '2006.10214'
 
+opentv:
+  type: misc
+  title: 'Open-TeleVision: Teleoperation with Immersive Active Visual Feedback'
+  author:
+  - Cheng, Xuxin
+  - Li, Jialong
+  - Yang, Shiqi
+  - Yang, Ge
+  - Wang, Xiaolong
+  date: 2024
+  url: https://arxiv.org/abs/2407.01512
+  serial-number:
+    arxiv: '2407.01512'
+
+zimmermann2017learningestimate3dhand:
+  type: misc
+  title: Learning to Estimate 3D Hand Pose from Single RGB Images
+  author:
+  - Zimmermann, Christian
+  - Brox, Thomas
+  date: 2017
+  url: https://arxiv.org/abs/1705.01389
+  serial-number:
+    arxiv: '1705.01389'
+
+GINSPEC:2524115:
+  type: article
+  title: A complete generalized solution to the inverse kinematics of robots
+  author:
+  - Goldenberg, A.A.
+  - Benhabib, B.
+  - Fenton, R.G.
+  date: 1985-03
+  page-range: 14–20
+  serial-number:
+    issn: 0882-4967
+  parent:
+    type: periodical
+    title: IEEE Journal of Robotics and Automation
+    issue: 1
+

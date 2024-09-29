@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram id="ZOmf4asVj-D0tWPk4HrZ" name="第 1 页">
+        <mxGraphModel dx="1194" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="6" value="以一定频率更新 buffer" style="edgeStyle=none;html=1;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="末端姿态获取和逆解模块" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="380" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="关节角度 + 速度 buffer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="以低于控制频率若干倍的频率&lt;br&gt;向 buffer 中获取一个目标角度速度对" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="运动规划和插值模块" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="390" y="510" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
