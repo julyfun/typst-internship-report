@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="24.7.7">
+  <diagram name="第 1 页" id="AnMRVbrkqxffbET3McZs">
+    <mxGraphModel dx="1493" dy="956" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jegcrzORA-ZSloYt-0iM-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-1" target="jegcrzORA-ZSloYt-0iM-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-12" value="Data: Several Vive Tracker position (serial number + floats)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jegcrzORA-ZSloYt-0iM-11">
+          <mxGeometry x="-0.0125" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-1" value="Warehouse: OpenVR-TCP (on Windows) &lt;br&gt; Function: Pick up the position information of Vive Tracker via OpenVR SDK, send it to WSL &lt;div&gt; external dependencies through TCP: POCO library &lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="310" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-2" target="jegcrzORA-ZSloYt-0iM-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-5" value="Data: Vive Tracker position &lt;div&gt; &lt;br&gt; &lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jegcrzORA-ZSloYt-0iM-3">
+          <mxGeometry x="-0.1159" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-2" value="Software: Streamvr (only good support &amp; nbsp; windows) &lt;div&gt; This is the driver of Vive Tracker &lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="160" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-8" value="Remarks: see Readme" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="30" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-9" target="jegcrzORA-ZSloYt-0iM-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-9" value="ROS package: vr_track_tcp &lt;div&gt; Function: Receive l &lt;span style = &quot;background-color: initial;&quot;&gt; Ocalhost: 3001 position, and &lt;/span&gt; &lt;/div&gt; &lt;div&gt; Published to TF2 (&quot;Ref&quot;&amp; lt; = &amp; gt; &quot;tracker_random+serial number&quot;) &lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="161" y="470" width="208" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-13" target="jegcrzORA-ZSloYt-0iM-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-13" value="ROS TF2 coordinate system visualization" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="535" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-15" target="jegcrzORA-ZSloYt-0iM-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-15" value="ROS package: VR_CALI &lt;DIV&gt; Function: calibrate the custom coordinate system, publish to TF2 (Custom &amp; LT; = &amp; GT; Tracker_upricht+serial number) &lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="165" y="560" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-17" target="jegcrzORA-ZSloYt-0iM-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="789.9999999999998" y="365" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-17" value="ROS package: IK &lt;div&gt; Function: Communicate with port IP 8899 with the robotic arm host, receive the TF2 Tracker coordinate and filter, reverse solution, interpolation, plan, and send it to the Bo Bo Robotic arm and Moveit2 to detect the collision. &lt;/Div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="385" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-21" target="jegcrzORA-ZSloYt-0iM-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-22" target="jegcrzORA-ZSloYt-0iM-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-22" target="jegcrzORA-ZSloYt-0iM-48">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="290" />
+              <mxPoint x="570" y="771" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-55" value="Initialization data: Provide a collision model &lt;div&gt; (configured through Movei2 Setup Assistant) &lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jegcrzORA-ZSloYt-0iM-54">
+          <mxGeometry x="0.5402" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-22" value="ROS Moveit2 &lt;div&gt; Function: Receive the real -time information of the collision model and the robotic arm, provide collision detection and Planning &lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="250" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-36" target="jegcrzORA-ZSloYt-0iM-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-36" value="Future ROS package: Hand model detection &lt;div&gt; Role: detecting the root &lt;span style = &quot;background-color: initial;&quot;&gt; coordinates, you only need to publish the Base-terminal coordinate system to TF2 &lt;/span&gt; &lt;/span&gt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="770" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-38" value="Period coordinate capture plan 1" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="125" y="120" width="280" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-39" value="Period coordinate capture scheme 2" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="710" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-41" target="jegcrzORA-ZSloYt-0iM-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-41" target="jegcrzORA-ZSloYt-0iM-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-41" value="ROS package: Joint_broadCaster" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="390" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-47" value="Apocalyptic robotic arm (allowed multi -arm)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="165" width="300" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-31" value="Fun Bo Robotic Host" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="jegcrzORA-ZSloYt-0iM-47">
+          <mxGeometry x="47.5" y="120" width="195" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-21" value="ROS package: AUBO_Dual3 &lt;div&gt; Function: Provide a collision model &lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="jegcrzORA-ZSloYt-0iM-47">
+          <mxGeometry x="90" y="35" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="jegcrzORA-ZSloYt-0iM-48" target="jegcrzORA-ZSloYt-0iM-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-50" value="Data: control and state" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jegcrzORA-ZSloYt-0iM-49">
+          <mxGeometry x="0.4" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jegcrzORA-ZSloYt-0iM-48" value="Other types of robotic arms (can be 7 axes, but the IK package needs to be an additional abstraction)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="580" width="300" height="255" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
