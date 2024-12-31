@@ -1,0 +1,48 @@
+Slide 1: Background - Teleoperation
+
+Good afternoon everyone, I'm glad to be here today and tell you something about my project during the intership in UJI. This project centers on teleoperation, a technology that enables a robot arm to replicate human hand movements with exceptional precision, speed, smoothness, and safety. This capability is crucial as we develop a new type of Dexterous Hand, designed to be integrated into various fields. Applications range from medicine, rescue operations, space exploration, teleoperation allows for tasks in hazardous environments. Additionally, it supports robot imitation learning and even innovative ideas like remote operations in a milk tea shop, showcasing the system's versatility and potential.
+
+Slide 2: Hand Posture Detection
+
+To achieve accurate hand posture detection, we utilize the HTC VIVE Tracker, a sophisticated sensor known for its high precision in capturing both translational and rotational data. Despite its accuracy, the tracker is susceptible to physiological vibrations that can impede performance. These vibrations, inherent in human motion, need to be addressed to ensure seamless operation. By focusing on minimizing these disturbances, we aim to enhance the system's overall effectiveness.
+
+Slide 3: Vibration Frequencies
+
+Hand vibrations present a unique challenge due to their lack of a fixed period, making simple low-pass filtering methods ineffective in smoothing these signals. To tackle this, we employ a Kalman filter, a robust algorithm designed to estimate and reduce noise in dynamic systems. This approach allows us to smooth out vibrations significantly, providing a stable and accurate posture detection system.
+
+Slide 4: Kalman Filter Implementation
+
+This mathematical tool efficiently estimates the state of a dynamic system, significantly reducing noise and providing smoother data.
+
+The movement equation is shown up here, this is a simple uniform motion equation, while in Kalman filter we introduce a variance term so that we can estimate the hidden state of the system like the covariance of observation and estimation. In the updating process, the filter calculate the state that best matches both previous observation and current measurement by the VIVE tracker.
+
+The result is a much smoother and more accurate representation of hand posture, as illustrated by the graph where the filtered data (in orange) shows a significant reduction in noise compared to the original data (in blue). This enhancement is crucial for precise teleoperation.
+
+Slide 5: New IK Solver
+
+Our innovative Inverse Kinematics (IK) solver is designed to calculate the joint angles necessary for a robot arm to reach specific positions and orientations. Previous solutions, such as manufacturer-provided solvers, were often opaque and prone to crashes, while others like KDL had issues with solution continuity and joint limits. Our approach allows for customizable objectives, such as obstacle avoidance and minimizing joint angle changes. This flexibility ensures that the robot arm operates smoothly and efficiently, adapting to various tasks and environments, thereby enhancing its utility across multiple applications, from industrial to delicate medical procedures.
+
+Slide 6: IK Optimization
+
+The configuration and structure of the robot arm is different from human arms, so we have to figure out a a way to map 6-degrees-of-freedom hand posture to the end effector of the robot arm. We reformulate the Inverse Kinematics problem in a nonlinear optimization form, focusing on achieving target positions with minimal joint angle changes. This involves defining a customizable loss function, which allows us to tailor the solver to specific tasks and objectives. By optimizing this function using the BFGS method, we efficiently handle bound constraints and improve convergence. This algorithm returns with the robot arm joint angles that minimized the loss function.
+
+Slide 7: Online Interpolation
+
+The direct joint angles got from the IK solver cannot be used immediately due to frequency discrepancies and motor limitations. We address this by calculating joint angles and velocities that meet targets swiftly while adhering to acceleration and jerk constraints. Our online interpolation method ensures smooth transitions between movements, respecting the physical limits of the robot's motors. This allows the system to adapt dynamically to changing targets, optimizing performance without sacrificing safety or precision. By managing these factors, we ensure that the robot arm operates efficiently and effectively, even in complex and demanding environments.
+
+Slide 8: Online Interpolation Algorithm
+
+After the customized IK, we find the sensor data frequency is too low for real-time control, which requires about 300 herts control waypoints, and the direct IK result contains large acceleration that is harmful to motors. So we proposed a new online interpolation algorithm that optimizes velocity transitions without exceeding acceleration and even jerk limits, which means the current of the motor changes continuously. Unlike traditional methods, it does not require a predefined time frame as in teleoperation the target changes with time. The algorithm shown here is a simplified quadratic version that represents my main idea, that is to adapt maxmimum velocity, acceleration and jerk in every control frame but you have to brake when you are about to reach the distance, velocity and acceleration target (just the integral term of the fomrer ones).
+
+Slide 9: Interpolation Results
+
+The results of our interpolation method demonstrate effective multi-degree-of-freedom (DOF) control, where position, velocity, acceleration, and jerk are well-managed. By limiting joint jerks, we achieve smooth and fluid trajectories, minimizing abrupt movements that could cause wear or errors. The system is now capable of drawing simple shapes and some delicate operations.
+
+Slide 10: Extensible Teleoperation System
+
+Our teleoperation framework is designed to be fully object-oriented and extensible, allowing for seamless integration of new features and technologies. It supports virtual environments, enabling simulation and testing in controlled settings. The system can also accommodate dual-arm setups and additional sensors, providing flexibility for complex tasks. This adaptability ensures that our solution can evolve with technological advancements and specific user needs.
+
+Slide 11: Migrating
+
+This code is written entirely in C++ using the ROS2 framework, and I have migrated it to another robotic arm dexterous hand system. The above picture shows the teleoperation in the simulation environment, which has been able to complete the classic pick-and-place operation and generate usable data for fine-tuning the imitation learning.
+

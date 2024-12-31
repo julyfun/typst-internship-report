@@ -28,7 +28,7 @@
 #let s = (s.methods.info)(
   self: s,
   title: [Internship report in UJI],
-  subtitle: [Works in robot arm teleoperation],
+  subtitle: [Robot arm teleoperation],
   author: [Junjie Fang],
   date: datetime.today(),
   institution: [SJTU],
@@ -88,12 +88,11 @@
 
 // --- 以下为正文
 
-
 == Background - Teleoperation
 
 - Detect human hand posture and let the robot arm mimic it
 - As accurate, fast, smooth and safe as possible
-- The startup company is designing a new type of Dexterous Hand and it will be installed on the robot arm
+- Motivation: the startup company is designing a new type of Dexterous Hand and it will be installed on this robot arm
 
 #figure(image("pic/002.jpg", height: 56%), caption: "Aubo I5 arm")
 
@@ -197,7 +196,7 @@ Achiece the target with minimal joint angle changes.
 
 - A general purpose IK solver with customizable loss function terms.
   - Easily design loss terms for different tasks and arms!
-- To handle bound constraints and for convergence efficiency, We optimize the loss function using L-BFGS-B method.
+- To handle bound constraints and for convergence efficiency, We optimize the loss function using BFGS method.
 
 #let cap3 = "Online interpolation - Fast and smooth movement"
 
@@ -210,7 +209,7 @@ Achiece the target with minimal joint angle changes.
     - Motor current $<==>$ Acceleration
     - Current change rate $<==>$ Jerk
 - Calculate the joint angle and joint velocity target each time the IK result updates
-- Achieve the target angle and velocity as fast as possible - Is there a best trajectory?
+- Achieve the target angle and velocity as fast as possible while the target changes with time - Is there a best trajectory?
 
 == #cap3
 
@@ -241,14 +240,27 @@ Achiece the target with minimal joint angle changes.
 ) 
 ] <algo1>
 
+This is a simplified version because the full version is too long!
+
 == #cap3
 
 - Advantages to prior interpolation methods:
   - No need to provide expected time
   - Will never exceed the acceleration and jerk limits
-  
+
+== Interpolation result
+
+#slide[
+#figure(image("pic/008.png", height: 80%), caption: "Multi DOF interpolation")
+][
+#figure(image("pic/009.png", height: 65%), caption: "Position, velocity, acceleration and jerk")
+The trajactory is smoothed because joint jerks are limited in some range.
+]
+
+#figure(image("pic/012.png", height: 80%), caption: "Tracking 0.5hz sine wave sampling with 1m amplitude, sampling frequency 30hz, output control frequency 300hz")
+
 #figure(image("pic/007.png", height: 65%), caption: "Control the arm to draw shapes")
-  
+
 == Extensible teleoperation system
 
 - The framework is fully object-oriented and extensible 
@@ -257,6 +269,12 @@ Achiece the target with minimal joint angle changes.
 
 #figure(image("pic/006.png", height: 100%))
 
-== Code
+== Migrating
 
-The code can be found in https://github.com/julyfun/moveit2_aubo
+#slide[
+#figure(image("pic/013.png", height: 70%), caption: "Sensor switched to VR headset to track hand & finger pose")
+][
+#figure(image("pic/011.png", height: 80%), caption: "Shadow hand control")
+][
+#figure(image("pic/010.png", height: 80%), caption: "Algorithm framework adapted on Shadow UR5 arm-hand system")
+]
