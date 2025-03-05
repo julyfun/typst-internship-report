@@ -112,3 +112,83 @@ GINSPEC:2524115:
     title: IEEE Journal of Robotics and Automation
     issue: 1
 
+chi2024diffusionpolicyvisuomotorpolicy:
+  type: misc
+  title: 'Diffusion Policy: Visuomotor Policy Learning via Action Diffusion'
+  author:
+  - Chi, Cheng
+  - Xu, Zhenjia
+  - Feng, Siyuan
+  - Cousineau, Eric
+  - Du, Yilun
+  - Burchfiel, Benjamin
+  - Tedrake, Russ
+  - Song, Shuran
+  date: 2024
+  url: https://arxiv.org/abs/2303.04137
+  serial-number:
+    arxiv: '2303.04137'
+
+chi2024universalmanipulationinterfaceinthewild:
+  type: misc
+  title: 'Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots'
+  author:
+  - Chi, Cheng
+  - Xu, Zhenjia
+  - Pan, Chuer
+  - Cousineau, Eric
+  - Burchfiel, Benjamin
+  - Feng, Siyuan
+  - Tedrake, Russ
+  - Song, Shuran
+  date: 2024
+  url: https://arxiv.org/abs/2402.10329
+  serial-number:
+    arxiv: '2402.10329'
+
+wang2023rangedikoptimizationbasedrobotmotion:
+  type: misc
+  title: 'RangedIK: An Optimization-based Robot Motion Generation Method for Ranged-Goal Tasks'
+  author:
+  - Wang, Yeping
+  - Praveena, Pragathi
+  - Rakita, Daniel
+  - Gleicher, Michael
+  date: 2023
+  url: https://arxiv.org/abs/2302.13935
+  serial-number:
+    arxiv: '2302.13935'
+
+black2024pi0visionlanguageactionflowmodel:
+  type: misc
+  title: '$\\pi_0$: A Vision-Language-Action Flow Model for General Robot Control'
+  author:
+  - Black, Kevin
+  - Brown, Noah
+  - Driess, Danny
+  - Esmail, Adnan
+  - Equi, Michael
+  - Finn, Chelsea
+  - Fusai, Niccolo
+  - Groom, Lachy
+  - Hausman, Karol
+  - Ichter, Brian
+  - Jakubczak, Szymon
+  - Jones, Tim
+  - Ke, Liyiming
+  - Levine, Sergey
+  - Li-Bell, Adrian
+  - Mothukuri, Mohith
+  - Nair, Suraj
+  - Pertsch, Karl
+  - Shi, Lucy Xiaoyang
+  - Tanner, James
+  - Vuong, Quan
+  - Walling, Anna
+  - Wang, Haohuan
+  - Zhilinsky, Ury
+  date: 2024
+  url: https://arxiv.org/abs/2410.24164
+  serial-number:
+    arxiv: '2410.24164'
+
